@@ -7,32 +7,32 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-08-18 19:48+0200\n"
+"POT-Creation-Date: 2020-12-27 16:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "========\n"
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "isoquery"
 msgstr ""
 
 #. type: Title -
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "Search and display various ISO codes (country, language, ...)"
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 ":Date:            2018-08-18\n"
 ":Version:         3.2.3\n"
@@ -40,21 +40,22 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "SYNOPSIS"
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "**isoquery** [*OPTION...*] [*ISO codes*]\n"
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "DESCRIPTION"
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "This manual page documents briefly the **isoquery** command.  It can be used "
 "to generate a tabular output of the ISO standard codes provided by the "
@@ -64,11 +65,12 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "OPTIONS"
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "This program follows the usual GNU command line syntax, with long options "
 "starting with two dashes ('**-**'). **isoquery** supports the following "
@@ -76,7 +78,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "-i STANDARD, --iso=STANDARD  The ISO standard to use. Possible values: "
 "639-2,\n"
@@ -86,7 +88,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "-p PATHNAME, --pathname=PATHNAME  Use *PATHNAME* as prefix for the data "
 "files\n"
@@ -94,17 +96,17 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "-l LOCALE, --locale=LOCALE   Use this *LOCALE* for output\n"
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "-n, --name                   Name for the supplied codes (default)\n"
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "-o, --official_name          Official name for the supplied codes. This may "
 "be\n"
@@ -113,7 +115,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "-c, --common_name            Common name for the supplied codes. This may "
 "be\n"
@@ -123,7 +125,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "-0, --null                   Separate entries with a NULL character "
 "instead\n"
@@ -131,21 +133,22 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "-h, --help                   Show summary of options\n"
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "-v, --version                Show program version and copyright\n"
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "EXAMPLES"
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "If called without any command line options, **isoquery** will put out a "
 "table of all ISO 3166-1 codes. The first three columns contain the alpha-2 "
@@ -154,11 +157,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid "::"
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery\n"
 "  AW      ABW     533     Aruba\n"
@@ -167,13 +171,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "If you need only some countries, you can specify any of the codes in the "
 "first three columns to cut down the output."
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery so nor 484\n"
 "  SO      SOM     706     Somalia\n"
@@ -182,6 +187,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "Should you need the translations of the countries' names, just specify in "
 "which *LOCALE* you'd like to see the output.  Please note that the original "
@@ -190,7 +196,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "    $ isoquery --locale=nl fr de es\n"
 "    FR      FRA     250     Frankrijk\n"
@@ -199,6 +205,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "All of the above works for different ISO standards as well, so you can "
 "switch to the more extensive standard ISO 3166-2 by using the **--iso** "
@@ -208,7 +215,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery --iso=3166-2\n"
 "  AD-02   Parish          Canillo\n"
@@ -217,6 +224,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "Codes which have been deleted from ISO 3166-1 are available in ISO 3166-3.  "
 "The columns are alpha-3 code, alpha-4 code, numeric code, comment, "
@@ -225,7 +233,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery --iso=3166-3\n"
 "  AFI     AIDJ    262             1977    French Afars and Issas\n"
@@ -237,6 +245,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "For ISO 639-2, the first three columns are the alpha-3 code, the "
 "bibliographic code, and the alpha-2 code. The second and third columns may "
@@ -244,7 +253,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery --iso=639-2\n"
 "  aar             aa      Afar\n"
@@ -257,13 +266,14 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "You can trim down the results by specifying only some codes. Moreover, the "
 "option to get translated names is also available."
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery --iso=639-2 --locale=pt vi bo kl\n"
 "  vie             vi      Vietnamita\n"
@@ -272,6 +282,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "If you want to use ISO 639-3, the displayed columns are alpha-3, scope, "
 "type, alpha-2, bibliographic, and the language name. Both alpha-2 and "
@@ -279,7 +290,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery -i 639-3 aal new spa guc\n"
 "  aal     I       L                       Afade\n"
@@ -289,11 +300,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid "ISO 639-5 is also available. The displayed columns are alpha-3 and name."
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery -i 639-5 aus tut\n"
 "  aus     Australian languages\n"
@@ -301,6 +313,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "You can get selected translations of currency names from the ISO 4217 "
 "standard by using the following command. The first two columns are the "
@@ -308,7 +321,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery --iso=4217 --locale=da cad 392\n"
 "  CAD     124     Canadisk dollar\n"
@@ -316,6 +329,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "If you need to get script names, you can use the ISO 15924 table.  The first "
 "two columns are the alpha-4 code and the numerical code assigned to the "
@@ -323,7 +337,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#, no-wrap
+#, markdown-text, no-wrap
 msgid ""
 "  $ isoquery --iso=15924 jpan latn 280\n"
 "  Jpan    413     Japanese (alias for Han + Hiragana + Katakana)\n"
@@ -332,17 +346,19 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "FILES"
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "By default, the JSON files provided by the **iso-codes** package will be "
 "used."
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid ""
 "| */usr/share/iso-codes/json/iso_639-2.json* | "
 "*/usr/share/iso-codes/json/iso_639-3.json* | "
@@ -355,10 +371,11 @@ msgid ""
 msgstr ""
 
 #. type: Title =
-#, no-wrap
+#, markdown-text, no-wrap
 msgid "AUTHOR"
 msgstr ""
 
 #. type: Plain text
+#, markdown-text
 msgid "Dr. Tobias Quathamer <toddy@debian.org>"
 msgstr ""
