@@ -1,7 +1,7 @@
 Isoquery
 ========
 
-[![Build Status](https://travis-ci.org/toddy15/isoquery.svg?branch=master)](https://travis-ci.org/toddy15/isoquery)
+[![Build Status](https://travis-ci.org/toddy15/isoquery.svg?branch=main)](https://travis-ci.org/toddy15/isoquery)
 
 Search and display ISO codes for countries, languages, currencies, and scripts.
 
