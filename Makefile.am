@@ -64,9 +64,22 @@ man_pt/isoquery.1: man/isoquery.rst man/pt.po man/pt.add
 	--localized man_pt/isoquery.rst
 	$(RST2MAN) man_pt/isoquery.rst man_pt/isoquery.1
 
+# Create and install Italian manpage
+EXTRA_DIST += man/it.po man/it.add
+man_itdir = $(mandir)/it/man1
+man_it_DATA = man_it/isoquery.1
+man_it/isoquery.1: man/isoquery.rst man/it.po man/it.add
+	$(MKDIR_P) man_it
+	po4a-translate --format text --option markdown \
+	--master $(top_srcdir)/man/isoquery.rst \
+	--po $(top_srcdir)/man/it.po \
+	--addendum $(top_srcdir)/man/it.add \
+	--localized man_it/isoquery.rst
+	$(RST2MAN) man_it/isoquery.rst man_it/isoquery.1
+
 # Remove temporary build directories for translated manpages
 clean-local:
-	-rm -rf man_de man_fr man_pt
+	-rm -rf man_de man_fr man_pt man_it
 
 # Some convenience targets for manpage generation
 pot-man:
