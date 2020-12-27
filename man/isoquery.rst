@@ -71,7 +71,7 @@ in the fourth column.
 ::
 
   $ isoquery
-  AF      AFG     004     Afghanistan
+  AW      ABW     533     Aruba
   [...]
   ZW      ZWE     716     Zimbabwe
 
