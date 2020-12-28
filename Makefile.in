@@ -179,10 +179,11 @@ am__uninstall_files_from_dir = { \
   }
 man1dir = $(mandir)/man1
 am__installdirs = "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man_dedir)" \
-	"$(DESTDIR)$(man_frdir)" "$(DESTDIR)$(man_ptdir)"
+	"$(DESTDIR)$(man_frdir)" "$(DESTDIR)$(man_itdir)" \
+	"$(DESTDIR)$(man_ptdir)"
 NROFF = nroff
 MANS = $(man1_MANS)
-DATA = $(man_de_DATA) $(man_fr_DATA) $(man_pt_DATA)
+DATA = $(man_de_DATA) $(man_fr_DATA) $(man_it_DATA) $(man_pt_DATA)
 RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
   distclean-recursive maintainer-clean-recursive
 am__recursive_targets = \
@@ -401,8 +402,11 @@ SUBDIRS = po src tests
 # Create and install French manpage
 
 # Create and install Portuguese manpage
+
+# Create and install Italian manpage
 EXTRA_DIST = README.md man/isoquery.rst man/isoquery-man.pot man/de.po \
-	man/de.add man/fr.po man/fr.add man/pt.po man/pt.add
+	man/de.add man/fr.po man/fr.add man/pt.po man/pt.add man/it.po \
+	man/it.add
 man1_MANS = isoquery.1
 CLEANFILES = isoquery.1
 man_dedir = $(mandir)/de/man1
@@ -411,6 +415,8 @@ man_frdir = $(mandir)/fr/man1
 man_fr_DATA = man_fr/isoquery.1
 man_ptdir = $(mandir)/pt/man1
 man_pt_DATA = man_pt/isoquery.1
+man_itdir = $(mandir)/it/man1
+man_it_DATA = man_it/isoquery.1
 all: all-recursive
 
 .SUFFIXES:
@@ -530,6 +536,27 @@ uninstall-man_frDATA:
 	@list='$(man_fr_DATA)'; test -n "$(man_frdir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	dir='$(DESTDIR)$(man_frdir)'; $(am__uninstall_files_from_dir)
+install-man_itDATA: $(man_it_DATA)
+	@$(NORMAL_INSTALL)
+	@list='$(man_it_DATA)'; test -n "$(man_itdir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(man_itdir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(man_itdir)" || exit 1; \
+	fi; \
+	for p in $$list; do \
+	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+	  echo "$$d$$p"; \
+	done | $(am__base_list) | \
+	while read files; do \
+	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(man_itdir)'"; \
+	  $(INSTALL_DATA) $$files "$(DESTDIR)$(man_itdir)" || exit $$?; \
+	done
+
+uninstall-man_itDATA:
+	@$(NORMAL_UNINSTALL)
+	@list='$(man_it_DATA)'; test -n "$(man_itdir)" || list=; \
+	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	dir='$(DESTDIR)$(man_itdir)'; $(am__uninstall_files_from_dir)
 install-man_ptDATA: $(man_pt_DATA)
 	@$(NORMAL_INSTALL)
 	@list='$(man_pt_DATA)'; test -n "$(man_ptdir)" || list=; \
@@ -859,7 +886,7 @@ check: check-recursive
 all-am: Makefile $(MANS) $(DATA)
 installdirs: installdirs-recursive
 installdirs-am:
-	for dir in "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man_dedir)" "$(DESTDIR)$(man_frdir)" "$(DESTDIR)$(man_ptdir)"; do \
+	for dir in "$(DESTDIR)$(man1dir)" "$(DESTDIR)$(man_dedir)" "$(DESTDIR)$(man_frdir)" "$(DESTDIR)$(man_itdir)" "$(DESTDIR)$(man_ptdir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-recursive
@@ -915,7 +942,7 @@ info: info-recursive
 info-am:
 
 install-data-am: install-man install-man_deDATA install-man_frDATA \
-	install-man_ptDATA
+	install-man_itDATA install-man_ptDATA
 
 install-dvi: install-dvi-recursive
 
@@ -962,7 +989,7 @@ ps: ps-recursive
 ps-am:
 
 uninstall-am: uninstall-man uninstall-man_deDATA uninstall-man_frDATA \
-	uninstall-man_ptDATA
+	uninstall-man_itDATA uninstall-man_ptDATA
 
 uninstall-man: uninstall-man1
 
@@ -978,13 +1005,14 @@ uninstall-man: uninstall-man1
 	install-data install-data-am install-dvi install-dvi-am \
 	install-exec install-exec-am install-html install-html-am \
 	install-info install-info-am install-man install-man1 \
-	install-man_deDATA install-man_frDATA install-man_ptDATA \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	installdirs-am maintainer-clean maintainer-clean-generic \
-	mostlyclean mostlyclean-generic pdf pdf-am ps ps-am tags \
-	tags-am uninstall uninstall-am uninstall-man uninstall-man1 \
-	uninstall-man_deDATA uninstall-man_frDATA uninstall-man_ptDATA
+	install-man_deDATA install-man_frDATA install-man_itDATA \
+	install-man_ptDATA install-pdf install-pdf-am install-ps \
+	install-ps-am install-strip installcheck installcheck-am \
+	installdirs installdirs-am maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+	pdf-am ps ps-am tags tags-am uninstall uninstall-am \
+	uninstall-man uninstall-man1 uninstall-man_deDATA \
+	uninstall-man_frDATA uninstall-man_itDATA uninstall-man_ptDATA
 
 .PRECIOUS: Makefile
 
@@ -1014,10 +1042,18 @@ man_pt/isoquery.1: man/isoquery.rst man/pt.po man/pt.add
 	--addendum $(top_srcdir)/man/pt.add \
 	--localized man_pt/isoquery.rst
 	$(RST2MAN) man_pt/isoquery.rst man_pt/isoquery.1
+man_it/isoquery.1: man/isoquery.rst man/it.po man/it.add
+	$(MKDIR_P) man_it
+	po4a-translate --format text --option markdown \
+	--master $(top_srcdir)/man/isoquery.rst \
+	--po $(top_srcdir)/man/it.po \
+	--addendum $(top_srcdir)/man/it.add \
+	--localized man_it/isoquery.rst
+	$(RST2MAN) man_it/isoquery.rst man_it/isoquery.1
 
 # Remove temporary build directories for translated manpages
 clean-local:
-	-rm -rf man_de man_fr man_pt
+	-rm -rf man_de man_fr man_pt man_it
 
 # Some convenience targets for manpage generation
 pot-man:
