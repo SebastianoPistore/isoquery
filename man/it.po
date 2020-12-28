@@ -68,7 +68,7 @@ msgid ""
 msgstr ""
 "Questa pagina documenta brevemente il comando \"isoquery\".  Può essere "
 "utilizzato per generare un output tabulare dei codici standard ISO forniti "
-"dal pacchetto **iso-codes*.  Analizza i file JSON e mostra tutti i codici "
+"dal pacchetto **iso-codes**.  Analizza i file JSON e mostra tutti i codici "
 "ISO che contengono oppure solo alcuni, se specificato da riga di comando.  "
 "Inoltre permette di ottenere tutte le traduzioni disponibili dei codici ISO."
 
@@ -105,12 +105,12 @@ msgid ""
 "                                  (default: /usr/share/iso-codes/json)\n"
 msgstr ""
 "-p NOMEPERCORSO, --pathname=NOMEPERCORSO  Utilizza i dati ISO presenti nei file json presenti in *NOMEPERCORSO*\n"
-"                                   (default: /usr/share/iso-codes/json)\n"
+"                                          (default: /usr/share/iso-codes/json)\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "-l LOCALE, --locale=LOCALE   Use this *LOCALE* for output\n"
-msgstr "-l LOCALE, --locale- LOCALE   Utilizzare questo valore di *LOCALE* per l'output\n"
+msgstr "-l LOCALE, --locale=LOCALE   Utilizzare questo valore di *LOCALE* per l'output\n"
 
 #. type: Plain text
 #, no-wrap
@@ -124,7 +124,7 @@ msgid ""
 "                             the same as --name (only applies to ISO 3166-1)\n"
 msgstr ""
 "-o, --official_name          Nome ufficiale dei codici. Il valore restituito può essere\n"
-"                              uguale a --name (si applica solo a ISO 3166-1)\n"
+"                             uguale a --name (si applica solo a ISO 3166-1)\n"
 
 #. type: Plain text
 #, no-wrap
@@ -134,9 +134,8 @@ msgid ""
 "                             639-3, and 3166-1)\n"
 msgstr ""
 "-c, --common_name            Nome comune dei codici. Il valore restituito può essere\n"
-"                              uguale a --name (si applica solo a ISO 639-2,\n"
-"                              639-3 e 3166-1)\n"
-"\n"
+"                             uguale a --name (si applica solo a ISO 639-2,\n"
+"                             639-3 e 3166-1)\n"
 
 #. type: Plain text
 #, no-wrap
@@ -145,7 +144,7 @@ msgid ""
 "                             of newline\n"
 msgstr ""
 "-0, --null                   Separare le voci con un carattere NULL anziché\n"
-"con il ritorno a capo\n"
+"                             con il ritorno a capo\n"
 
 #. type: Plain text
 #, no-wrap
