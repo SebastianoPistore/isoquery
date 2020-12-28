@@ -1,3 +1,13 @@
+Isoquery 3.2.4
+==============
+27 December 2020
+
+* Update test to match French translation change in iso-codes
+  Closes: #963371
+* Add Italian translation of program and manpage. Thanks to
+  Sebastiano Pistore <SebastianoPistore.info@protonmail.ch>!
+
+
 Isoquery 3.2.3
 ==============
 18 August 2018
